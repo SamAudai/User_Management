@@ -1,0 +1,16 @@
+<div class="container" style="padding-top: 1rem">
+    <ul class="list-group" *ngFor="let user of users$ | async">
+        <li class="list-group-item mb-2" [class.is-active]="selectedUser === user.fullName">
+            <span class="pull-left ">
+                <img src="../../assets/img/user.svg" style="border: 1px solid silver; border-radius: 50%" width="50"
+                    height="50" />
+            </span>
+            <h6 style="padding-left: 1rem; padding-right: 2rem; display: inline">{{ user.fullName }}</h6>
+            <span class="row row-cols-lg-auto g-3 align-items-center mt-1">
+                <button class="btn btn-info col-12" style="display: inline;" (click)="viewDetails(user.id)">View</button>
+                <button class="btn btn-success col-12" style="margin-left: 3px"
+                [routerLink]="['../users/user_details', user.id]" fragment="active-user">Active</button>
+            </span>
+        </li> 
+    </ul>
+</div>

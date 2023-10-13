@@ -1,0 +1,16 @@
+<form #form="ngForm" (ngSubmit)="onSubmit(form)">
+    <div class="card text-white bg-secondary mt">
+        <div class="card-header text-center">Login</div>
+        <div class="card-body">
+            <div class="form-group">
+                <input name="userName" ngModel class="form-control mb-3" placeholder="User Name Here" />
+            </div>
+            <div class="form-group">
+                <input name="password" ngModel class="form-control mb-3" placeholder="Password Here" />
+            </div>
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-light form-control mt-3  mb-3">Submit</button>
+        </div>
+    </div>
+</form>
